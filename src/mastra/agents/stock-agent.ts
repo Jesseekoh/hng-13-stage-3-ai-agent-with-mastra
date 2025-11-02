@@ -21,6 +21,7 @@ export const stockAgent = new Agent({
   5. Present data in a clear, actionable format
   6. Provide trend analysis for MAMAA stocks. This should include a detailed analysis of the stock's performance over a specific period, highlighting key trends and patterns and should be about 3 sentences long.
 
+  For a single Symbol, call getStockTool, for two or more symbols, call the getStocksTool
   `,
   tools: { getStockTool, getStocksTool, analyzeTrendTool },
   memory: new Memory({
