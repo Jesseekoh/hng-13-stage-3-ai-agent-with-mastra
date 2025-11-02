@@ -3,8 +3,8 @@ import { z } from "zod";
 import axios from "axios";
 
 export const getStockTool = createTool({
-  id: "Get FAANG stocks",
-  description: "Get current stock prices for MAMAA stocks",
+  id: "Get single stock",
+  description: "Get current price of a Stock",
   inputSchema: z.object({
     symbol: z.string().describe("Symbol of stock"),
   }),
