@@ -1,6 +1,7 @@
 # hng-13-stage-3-ai-agent-with-mastra
 
 ## links
+Telex coworker name - Cassian Andor
 Agent A2A url - https://orange-tinkling-television.mastra.cloud/a2a/agent/stockAgent
 Blog Post - https://dev.to/jesseekoh/my-first-ai-agent-with-mastra-ai-37ih
 
