@@ -52,7 +52,7 @@ export const analyzeTrendTool = createTool({
 });
 
 const getStockInfo = async (symbol: string) => {
-  const stocksUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${process.env.ALPHAVANTAGE_API_KEY}`;
+  const stocksUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${process.env.ALPHA_VANTAGE_API_KEY}`;
   const response = await axios.get(stocksUrl);
   return response.data;
 };
