@@ -21,7 +21,7 @@ export const getStocksTool = createTool({
   id: "Get FAANG stocks",
   description: "Get current stock prices for MAMAA stocks",
   inputSchema: z.object({
-    symbols: z.array(z.string().describe("Symbol of stock")),
+    symbols: z.array(z.string()).describe("Array of stock symbols"),
   }),
   outputSchema: z.array(
     z.object({
@@ -30,7 +30,7 @@ export const getStocksTool = createTool({
     }),
   ),
   execute: async ({ context }) => {
-    return await getStocksInfo(context.symbol);
+    return await getStocksInfo(context.symbols);
   },
 });
 
@@ -58,6 +58,7 @@ const getStockInfo = async (symbol: string) => {
 };
 
 const getStocksInfo = async (symbols: string[]) => {
+  console.log(symbols);
   const promises = symbols.map(async (symbol) => {
     const stockInfo = await getStockInfo(symbol);
     return stockInfo;
